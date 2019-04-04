@@ -1,10 +1,12 @@
 <?php
+	session_start();
 	require_once("../includes/funciones.php");
 	require_once('../includes/database.php');
 
 	$pdo = Database::connect();
 	$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
+    $usuario = $_SESSION['usuario'];
 
 $estado = "trámite";
 
@@ -21,10 +23,10 @@ $cont = $_POST['cont'];
 
 
 try { 
-	$sql = "INSERT INTO actores_recurso (fecha_recurso,  direccion, num_accion, num_procedimiento, sub,  ai, actor,  cont)
-				VALUES (?, ?, ?,  ?, ?, ?, ?, ?)";
+	$sql = "INSERT INTO actores_recurso (fecha_recurso,  direccion, num_accion, num_procedimiento, subnivel,  recurso_reconsideracion, actor,  cont, usuario)
+				VALUES (?, ?, ?,  ?, ?, ?, ?, ?, ?)";
 	$q = $pdo->prepare($sql);
-	$q->execute(array($fechanot, $dir, $accion, $procedimiento,  $sub, $recurso, $actor,  $cont));
+	$q->execute(array($fechanot, $dir, $accion, $procedimiento,  $sub, $recurso, $actor,  $cont, $usuario));
 
 	$mensaje = $fechanot . "Amparo Indirecto dado de alta";
 	echo($mensaje);

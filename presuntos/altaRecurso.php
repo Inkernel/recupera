@@ -73,14 +73,14 @@
                 <table>
                     <tr>
                         <td class="juicio-etiqueta">Recurso de Reconsideración</td>
-                        <td><input type = "text" name="recurso" id="recurso" size="35" class="juicio-redonda "></td>
+                        <td><input type = "text" name="recurso" id="recurso" size="50" class="juicio-redonda " value = <?php echo $procedimiento."-R-REC-" ?>></td>
                     </tr> 
 
 
 
                     <tr>
                         <td class="juicio-etiqueta ">Fecha Recurso</td>
-                        <td><input type="text" class="juicio-redonda " size="35" id="fechanot" name="fechanot"/></td>                       
+                        <td><input type="date" class="juicio-redonda " size="35" id="fechanot" name="fechanot"/></td>                       
                     </tr>
 
                     <tr>
