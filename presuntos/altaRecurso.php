@@ -28,7 +28,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="stylesheet" href="css/altaJuicio.css">
-    <script type="text/javascript" src="presuntos/altaAmparo.js"></script>
+    <script type="text/javascript" src="presuntos/altaRecurso.js"></script>
 
 
 	<script>
@@ -83,11 +83,8 @@
 
 
                     <tr>
-                        <td class="juicio-etiqueta ">Fecha Interposición</td>
-                        <td><input type="text" class="juicio-redonda " size="35" id="fechanot" name="fechanot"/></td>
-                        
-                        <td class="juicio-etiqueta ">Vencimiento</td>
-                        <td><input type="text" class="juicio-sinborde" size="35" id="vencimiento" name="vencimiento" readonly></td>
+                        <td class="juicio-etiqueta ">Fecha Recurso</td>
+                        <td><input type="text" class="juicio-redonda " size="35" id="fechanot" name="fechanot"/></td>                       
                     </tr>
 
                     <tr>
@@ -134,7 +131,7 @@
                     </tr>
                 </table>
             </form>
-            <button  type="botton" class="boton" name="inserta_juicio" id="inserta_juicio" >Insertar nuevo Amparo Indirecto</button>
+            <button  type="botton" class="boton" name="inserta_juicio" id="inserta_juicio" >Insertar Recurso Reconsideración</button>
 
         </div>
         <div class= "piePagina">
