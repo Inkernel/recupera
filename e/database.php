@@ -2,10 +2,10 @@
 header('Content-Type: text/html; charset=UTF-8');   
 class Database
 {
-    private static $dbName = 'dgr2' ;
+    private static $dbName = 'dgr' ;
     private static $dbHost = 'localhost' ;
     private static $dbUsername = 'root';
-    private static $dbUserPassword = 'root';
+    private static $dbUserPassword = '';
      
     private static $cont  = null;
      

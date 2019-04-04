@@ -21,10 +21,10 @@ $cont = $_POST['cont'];
 
 
 try { 
-	$sql = "INSERT INTO actores_recurso (fecha_recurso,  dir, accion, procedimiento, estado, sub,  ai, actor,  cont)
-				VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
+	$sql = "INSERT INTO actores_recurso (fecha_recurso,  direccion, num_accion, num_procedimiento, sub,  ai, actor,  cont)
+				VALUES (?, ?, ?,  ?, ?, ?, ?, ?)";
 	$q = $pdo->prepare($sql);
-	$q->execute(array($fechanot, $dir, $accion, $procedimiento, $estado, $sub, $recurso, $actor,  $cont));
+	$q->execute(array($fechanot, $dir, $accion, $procedimiento,  $sub, $recurso, $actor,  $cont));
 
 	$mensaje = $fechanot . "Amparo Indirecto dado de alta";
 	echo($mensaje);

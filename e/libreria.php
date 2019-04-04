@@ -123,7 +123,8 @@ class libreria
         $sql = "SELECT *, pfrr.num_procedimiento
         FROM pfrr_presuntos_audiencias
         INNER JOIN pfrr ON pfrr_presuntos_audiencias.num_accion = pfrr.num_accion
-        
+        where (status = 1) and (pfrr_presuntos_audiencias.tipo <> 'titularICC') 
+                and (pfrr_presuntos_audiencias.tipo <> 'titularTESOFE') and (pfrr_presuntos_audiencias.tipo <> 'responsableInforme')
         ";
         
         $stmt = $pdo->prepare($sql);

@@ -76,10 +76,6 @@
                         <td><input type = "text" name="recurso" id="recurso" size="35" class="juicio-redonda "></td>
                     </tr> 
 
-                    <tr>
-                        <td class="juicio-etiqueta ">Sala de Conocimiento</td>
-                        <td><input type="text" size="35" id="salaconocimiento" name="salaconocimiento" class="juicio-redonda"></td>
-                    </tr>
 
 
                     <tr>

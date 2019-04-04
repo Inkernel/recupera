@@ -1,5 +1,5 @@
 <?php
-require_once '../e/database.php';
+require_once '../includes/database.php';
 require '../e/libreria.php';
 $db = new libreria();
 

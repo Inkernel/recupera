@@ -68,7 +68,7 @@ $(document).ready(function() {
     
             ],
 
-            dom: '<"#boton"B><"top"fl>t<ipr><"clear">', //<#boton >frtip',  // <"top"B>irt<"bottom"flp><"clear">', //'Bfrtip',
+            dom:  '<"top"Birf>t<"bottom"lpi><"clear">', 
             buttons: [
                 'excelHtml5', 'pdfHtml5',  'copy'
             ],
