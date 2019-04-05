@@ -20,7 +20,7 @@ if ($result == "{}") {
             'fondo' => $db->dameJuicio($r['num_accion'], $r['nombre']),
             'cp' => $r['cp'],
             'estado' => $db->dameEstado($r['detalle_edo_tramite']),
-            'monto_no_solventado' => number_format(floatval($r['monto_no_solventado'])),
+            'monto_no_solventado' => number_format(floatval($r['monto_no_solventado']),2),
             'status' => $r['status']
         );
 	}

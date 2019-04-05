@@ -1,3 +1,52 @@
+
+DROP TABLE IF EXISTS bbbb;
+CREATE TABLE bbbb AS 
+select cp, entidad, direccion, num_accion, num_procedimiento, fecha_acuerdo_inicio,
+resolucion, detalle_edo_tramite as t, detalle_estado AS tramite, monto_no_solventado, inicio_frr, et_impugnacion
+from pfrr
+left join estados_tramite ON pfrr.detalle_edo_tramite = estados_tramite.id_estado
+where fecha_acuerdo_inicio > '20121231'
+
+DROP TABLE IF EXISTS bbb;
+CREATE TABLE bbb AS 
+select cp, entidad, direccion, num_accion, num_procedimiento, fecha_acuerdo_inicio,
+resolucion,t, tramite, monto_no_solventado, inicio_frr, et_impugnacion, detalle_estado as impugnacion
+from bbbb
+left join estados_tramite ON bbbb.et_impugnacion = estados_tramite.id_estado
+
+DROP TABLE IF EXISTS bb;
+CREATE TABLE bb AS 
+select resolucion, t, tramite,  et_impugnacion, impugnacion,
+case 
+when (et_impugnacion = 0 and t = 24 and year(resolucion)="2019") then 'Corriendo Plazo'
+when et_impugnacion = 45 then 'Subjudice'
+when t <> 24 then 'Trámite'
+else "X"
+end as firme,
+cp, entidad, direccion, num_accion, num_procedimiento, fecha_acuerdo_inicio, monto_no_solventado, inicio_frr
+from bbb
+
+
+SELECT count(num_accion) as asuntos, t, 
+        COUNT(CASE WHEN YEAR(fecha_acuerdo_inicio) = "2014" THEN num_accion ELSE null END) AS "2014",
+        COUNT(CASE WHEN YEAR(fecha_acuerdo_inicio) = "2015" THEN num_accion ELSE null END) AS "2015"
+From bb 
+group by t
+
+
+SELECT count(juicionulidad) as juicios, resultado,
+        COUNT(CASE WHEN YEAR(f_resolucion) = "2016" THEN juicionulidad ELSE null END) AS "2016",
+        COUNT(CASE WHEN YEAR(f_resolucion) = "2017" THEN juicionulidad ELSE null END) AS "2017",
+        COUNT(CASE WHEN YEAR(f_resolucion) = "2018" THEN juicionulidad ELSE null END) AS "2018",
+        COUNT(CASE WHEN YEAR(f_resolucion) = "2019" THEN juicionulidad ELSE null END) AS "2019"
+From juiciosnew 
+group by resultado
+
+
+
+
+
+
 DROP TABLE IF EXISTS devueltoFecha;
 CREATE TABLE devueltoFecha AS 
 SELECT accion, num_accion, oficioAcuse, tipo FROM `devuelto` 

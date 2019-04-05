@@ -17,7 +17,7 @@ if ($result == "{}") {
             'entidad' => mb_substr($r['entidad'],0,40), 
             'num_accion' => $r['num_accion'],
             'inicio_frr' => number_format(floatval($r['inicio_frr'])),
-            'monto_no_solventado' => number_format(floatval($r['monto_no_solventado'])),
+            'monto_no_solventado' => number_format(floatval($r['monto_no_solventado']),2),
             'pdrcs' => $r['pdrcs'],
             'fecha_edo_tramite' => $r['fecha_edo_tramite'],
             'detalle_edo_tramite' => $r['detalle_edo_tramite'],

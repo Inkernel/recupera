@@ -48,7 +48,7 @@ class libreria
                     union all
                     select num_accion, cont from aa) as asuntos
                 ) 
-                and detalle_edo_tramite in (24)
+                and detalle_edo_tramite in (23,24,25,26)
             ";
         $stmt = $pdo->prepare($sql);
         $stmt->execute();

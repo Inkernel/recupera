@@ -20,7 +20,7 @@ if ($result == "{}") {
             'cargo' => $r['cargo'],
             'estado' => $r['resultado'],
             'juicionulidad' => $r['juicionulidad'],
-            'monto_no_solventado' => number_format(floatval($r['monto_no_solventado']))
+            'monto_no_solventado' => number_format(floatval($r['monto_no_solventado']),2)
         );
 	}
 }

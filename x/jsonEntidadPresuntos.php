@@ -30,9 +30,9 @@ if ($result == "{}") {
             'UAA' => $db->dameUAA($r['num_accion']),
             'po' => $r['po'],
 
-            'monto' => number_format(floatval($monto)),
+            'monto' => number_format(floatval($monto),2),
             'inicio_frr' => number_format(floatval($r['inicio_frr'])),
-            'monto_no_solventado' => number_format(floatval($r['monto_no_solventado'])),
+            'monto_no_solventado' => number_format(floatval($r['monto_no_solventado']),2),
             'pdrcs' => $r['pdrcs'],
             'fecha_edo_tramite' => $r['fecha_edo_tramite'],
             'detalle_edo_tramite' => $r['detalle_edo_tramite'],

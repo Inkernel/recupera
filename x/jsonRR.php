@@ -17,7 +17,7 @@ if ($result == "{}") {
             'cont' => $r['cont'],
             'actor' => $r['actor'],
             'recurso_reconsideracion' => $r['recurso_reconsideracion'],
-            'monto_no_solventado' => number_format(floatval($r['monto_no_solventado'])),
+            'monto_no_solventado' => number_format(floatval($r['monto_no_solventado']),2),
             'detalle_edo_tramite' => $db->dameEstado($r['detalle_edo_tramite']),
             'entidadA' => $r['entidadA']	
 	

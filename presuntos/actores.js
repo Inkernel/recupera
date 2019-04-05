@@ -25,7 +25,7 @@ $(document).ready(function() {
         },
 
         ajax: {
-             url: "presuntos/jsonActoresMedios.php",
+             url: "./jsonActoresMedios.php",
              dataSrc: ''
         },
    
