@@ -20,7 +20,7 @@ select resolucion, t, tramite,  et_impugnacion, impugnacion,
 case 
 when (et_impugnacion = 0 and t = 24 and year(resolucion)="2019") then 'Corriendo Plazo'
 when et_impugnacion = 45 then 'Subjudice'
-when t <> 24 then 'Trámite'
+when t not in(23,24,25,26) then 'Trámite'
 else "X"
 end as firme,
 cp, entidad, direccion, num_accion, num_procedimiento, fecha_acuerdo_inicio, monto_no_solventado, inicio_frr
