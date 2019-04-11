@@ -17,17 +17,6 @@ $(document).ready(function() {
 	const juicionulidad = document.getElementById('juicionulidad');
     juicionulidad.focus();
 
-/*
-    if (valor === undefined || valor == null || valor.length === 0 || valor === "" ) {
-    //if(Boolean(valor)){
-        alert($("damos alta").val());
-        console.log($("#llave").val());
-    } else {
-        alert("ya tiene asignado un juicio este presunto para este procedimiento");
-        console.log($("#llave").val()+" qe pasa");
-        
-    }
-*/
 	$("#inserta_juicio").click(function(){
         var datosUrl =  "accion=" + accion  + "&" + "procedimiento=" + procedimiento  + "&" +
         "actor=" + actor + "&" + "cont=" + cont + "&" +  $("#forma").serialize();
@@ -54,13 +43,11 @@ $(document).ready(function() {
 						document.getElementById("inserta_juicio").disabled = true;
 						document.getElementById('inserta_juicio').style.visibility = 'hidden';
 						$("#fechanot").datepicker('disable');
+						$("#f_aviso").datepicker('disable');
 						$("#vencimiento").datepicker().datepicker('disable');
 						document.getElementById("dir").disabled = true;
 						document.getElementById("sub").disabled = true;
 
-					
-					//alert(datos);
-					//cerrarCuadro();
 					}
 				});
 		}
@@ -97,7 +84,17 @@ $(document).ready(function() {
         }
 		$("#vencimiento").val(d);   
 	  }
-    });
+	});
+
+
+	
+	$( "#f_aviso" ).datepicker({
+		dateFormat: "dd/mm/yy",
+		changeMonth: false,
+		numberOfMonths: 1,
+		showAnim:'slideDown',
+		beforeShowDay: noLaborales
+ 	 });
     
 });
 

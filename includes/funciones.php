@@ -100,7 +100,7 @@
 							<!--[if lte IE 6]><table><tr><td><![endif]-->
 								<ul class="sub submenu redonda5 ulMd">';
 								if($soloReportes != 1 && $direccion == "DG" )$menu .= '<li><a class="menu_md redonda3" href="?cont=medios_actores"> <img src="images/medio_reconcideracion_small.png" /> <span> Ver Actores </span> </a>';
-								if($soloReportes != 1 && $direccion == "DG" )$menu .= '<li><a class="menu_md redonda3" href="?presuntos/actores.php"> <img src="images/medio_reconcideracion_small.png" /> <span> Ver Actores </span> </a>';
+								if($soloReportes != 1 && $direccion == "DG" )$menu .= '<li><a class="menu_md redonda3" href="presuntos/actores.php"> <img src="images/medio_reconcideracion_small.png" /> <span> Ver Actores </span> </a>';
 								if($soloReportes != 1 )$menu .= '<li><a class="menu_md redonda3" href="#"> <img src="images/medio_actores_small.png" /> <span> Recurso de Reconsideración </span> </a>
 																		<ul class="submenu2 redonda5">
 																			<li> <a class="menu_md redonda3" href="?cont=medios_rr_actores"> <img src="images/actor.png" /> Ver Actores </a> </li>

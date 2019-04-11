@@ -17,15 +17,16 @@
     $juicionulidad = $_POST['juicionulidad'];
     $dir = $_POST['dir'];
     $fechanot = fechaMysql($_POST['fechanot']);
+    $f_aviso = fechaMysql($_POST['f_aviso']);
     $sub = $_POST['sub'];
     $vencimiento = fechaMysql($_POST['vencimiento']);
     $monto = $_POST['monto'];
 
     try { 
-        $sql = "INSERT INTO juiciosNew (nojuicio, fechanot,  dir, accion, procedimiento, resultado, sub, salaconocimiento, juicionulidad, actor, cont, vencimiento, monto)
-                    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+        $sql = "INSERT INTO juiciosNew (nojuicio, fechanot, f_aviso, dir, accion, procedimiento, resultado, sub, salaconocimiento, juicionulidad, actor, cont, vencimiento, monto)
+                    VALUES (?, ?, ?, ?, ?, ?,?, ?, ?, ?, ?, ?, ?, ?)";
         $q = $pdo->prepare($sql);
-        $q->execute(array($nojuicio, $fechanot, $dir, $accion, $procedimiento, $resultado, $sub, $salaconocimiento, $juicionulidad, $actor, $cont, $vencimiento, $monto));
+        $q->execute(array($nojuicio, $fechanot, $f_aviso, $dir, $accion, $procedimiento, $resultado, $sub, $salaconocimiento, $juicionulidad, $actor, $cont, $vencimiento, $monto));
 
         $mensaje = "Juicio Contencioso Administrativo dado de alta en la base de datos";
         echo($mensaje);

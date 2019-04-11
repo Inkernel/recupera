@@ -85,8 +85,13 @@
                         <td><input type="number" class="juicio-redonda " size="35" id="monto" min="0" name="monto" maxlength="12" /></td>
                     </tr>
 
+                    <tr>	
+                        <td class="juicio-etiqueta ">Aviso Electrónico</td>
+                        <td><input type="text" class="juicio-redonda " size="35" id="f_aviso" name="f_aviso"/></td>
+                    </tr>
+
                     <tr>
-                        <td class="juicio-etiqueta ">Fecha Notificacion</td>
+                        <td class="juicio-etiqueta ">Notificación (Boletin)</td>
                         <td><input type="text" class="juicio-redonda " size="35" id="fechanot" name="fechanot"/></td>
                         
                         <td class="juicio-etiqueta ">Vencimiento</td>
