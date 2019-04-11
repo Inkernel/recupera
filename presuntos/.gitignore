@@ -1,5 +1,2 @@
 /node_modules
-npm-debug.log
 .DS_Store
-/php/database.php
-/adicom/includes/clases.php
