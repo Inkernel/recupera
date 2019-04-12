@@ -31,6 +31,15 @@ width: 300px;
 }
 
 
+tfoot input {
+  width: 100%;
+  padding: 3px;
+  box-sizing: border-box;
+}
+
+
+
+
 
 #listajuicios { 
 /*  position: absolute;
@@ -87,125 +96,6 @@ width: 300px;
     padding:5px; 
     overflow : hidden
 }
-
-
-
-
-/*
-Input[type="text"], textarea, select {
-    font-family: Arial;
-    font-size: 12px;
-
-    border: 0;
-
-    padding: 5px;
-}
-*/
-
-tfoot input {
-    width: 100%;
-    padding: 3px;
-    box-sizing: border-box;
-}
-
-.juicio-etiqueta { 
-    display:block; 
-    padding:3px; 
-    color:#069; 
-    font-weight: normal;
-    margin:1px; 
-    text-align:right
-}
-
-.juicio-redonda {
-    font-family: Arial;
-    font-size: 12px;
-    border-radius: 5px;
-    border: 1px solid #999;
-}
-
-.juicio-sinborde {
-    border: 0 !important;
-}
-
-section {
-    float: left;
-    padding: 20px;
-    width: 25%;
-    background-color: #f1f1f1;
-    height: 600px; /* only for demonstration, should be removed */
-}
-
-fieldset { 
-    display: block;
-    color: #069;
-    font-weight: bold;
-    margin-left: 2px;
-    margin-right: 2px;
-    padding-top: 0.35em;
-    padding-bottom: 0.625em;
-    padding-left: 0.75em;
-    padding-right: 0.75em;
-    border: 1px groove (internal value);
-    border-color: rgb(240, 244, 245);
-}
-
-section td { 
-    padding:3px;
-    color:rgb(27, 63, 4); 
-    margin:1px; 
-    font-weight: bold
-
- }
-
-section.xx { 
-    display:block; 
-    padding:3px;
-    color:rgb(27, 63, 4); 
-    margin:1px; 
-    text-align:left;
-    font-weight: bold
- }
-
- #cuadroDialogoJuicios { 
-    position:fixed;
-    z-index:10;  
-    font-size:12px; 
-     display:none; 
-     padding:1px; 
-     background:#F5F5F5; 
-
-     top:5%; 
-     left:50%;
-     right:0;
-     margin-left: auto; 
-     margin-right: auto; 
-
-     -moz-border-radius:5p;
-     -webkit-border-radius: 5px; 
-     border-radius: 5px;
-    }
-
-
- #cuadroTituloJuicio
- { background:#333; 
-    padding:10px; 
-    color:#CCC; 
-    font-weight:bold; 
-    -moz-border-radius:5p;
-    -webkit-border-radius: 5px;
-     border-radius: 5px;
-    }
-
-#cuadroResJuicio
-{ line-height : normal; 
-    background:rgb(188, 238, 207); 
-    padding:5px; 
-    overflow : auto
-}
-
-
-
 
 
 .navbarJuicios {
