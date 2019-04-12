@@ -175,7 +175,11 @@
 				<h1>Juicio Contencioso Administrativo</h1>
 			</div>
 			<div>
-				<label for="fechanot">Notificación Juicio:</label>
+				<label for="f_aviso">Aviso Electrónico:</label>
+				<input type="date" name="f_aviso" id="f_aviso" value="<?php echo $r["f_aviso"]; ?>" >
+			</div>
+			<div>
+				<label for="fechanot">Notificación (Boletin):</label>
 				<input type="date" name="fechanot" id="fechanot" value="<?php echo $r["fechanot"]; ?>" >
 			</div>
 			<div>
@@ -588,11 +592,9 @@ $("#fecha_pre_alegatos").datepicker({
 					beforeSend: function(objeto)
 					{
 						console.log(datosUrl);
-					//$('#cuadroRes').html('<center><img src="images/load_grande.gif" style="margin:100px 0"></center>');
 					},
 					complete: function(objeto, exito)
 					{
-					//alert("Me acabo de completar") //if(exito=="success"){ alert("Y con éxito"); }
 					},
 					type: "POST",
 					url: "e/juiciosModificaUpdate.php",
