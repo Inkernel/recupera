@@ -577,9 +577,63 @@ $("#fecha_pre_alegatos").datepicker({
     });
 
 	*/	
+//------ Envia datos para base de datos
+$("#actreg").click(function() {
+				
+			var datosUrl = "id=" + <?php echo $r["id"] ?> + "&" + $("#modificaJuicio").serialize();
+		
+			//var confirma = confirm('Se modificará el juicio de:\n\n - <?php echo $r['actor']; ?> - \n\n ¿Desea continuar?');
+			//if(confirma)
+
+		Swal.fire({
+
+			title: 'Se modificará el juicio de:',
+			text: " <?php echo $r['actor']; ?> ",
+			type: 'warning',
+			showCancelButton: true,
+			confirmButtonColor: '#3085d6',
+			cancelButtonColor: '#d33',
+			confirmButtonText: 'Si, actualizalo !'
+
+
+		}).then((result) => {
+			  if (result.value) {
+		
+					$.ajax 	({
+						beforeSend: function(objeto) {
+							console.log(datosUrl);
+						},
+						complete: function(objeto, exito) {
+						},
+						type: "POST",
+						url: "e/juiciosModificaUpdate.php",
+						data: datosUrl,
+						error: function(objeto, quepaso, otroobj) {
+						//alert("Estas viendo esto por que fallé"); //alert("Pasó lo siguiente: "+quepaso);
+						},
+
+						success: function(datos) {
+							Swal.fire({
+								position: 'top-end',
+								type: 'success',
+								title: 'Juicio Actualizado',
+								showConfirmButton: false,
+								timer: 2500
+							});
+						//alert(datos);
+						cerrarCuadroJuicios();
+						}
+					});
+			  	}
+			})
+			
+});
+
+
+
 
 //------ Envia datos para base de datos
-	$("#actreg").click(function()
+	$("#actreg2").click(function()
 			{
 				
 			var datosUrl = "id=" + <?php echo $r["id"] ?> + "&" + $("#modificaJuicio").serialize();
@@ -603,9 +657,17 @@ $("#fecha_pre_alegatos").datepicker({
 					{
 					//alert("Estas viendo esto por que fallé"); //alert("Pasó lo siguiente: "+quepaso);
 					},
+
 					success: function(datos)
-					{ 
-					alert(datos);
+					{
+					Swal.fire({
+						position: 'top-end',
+						type: 'success',
+						title: 'Juicio Actualizado',
+						showConfirmButton: false,
+						timer: 2500
+					}) 
+					//alert(datos);
 					cerrarCuadroJuicios();
 					}
 				});

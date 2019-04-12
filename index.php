@@ -322,6 +322,8 @@ $.datepicker.setDefaults($.datepicker.regional['es']);
 	<!--  end footer-left -->
 </div>
 <!-- end footer -->
+<script type="text/javascript" src="js/sweetalert2.all.min.js"></script>
+
 </body>
 </html>
 <?php  mysql_close(); ?>

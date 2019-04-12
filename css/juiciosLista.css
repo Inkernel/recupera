@@ -21,6 +21,9 @@ margin-left: 0.5em;
 width: 300px;
 }
 
+.swal2-container {
+  z-index: 3000;
+}
 
 
 #listajuicios { 
