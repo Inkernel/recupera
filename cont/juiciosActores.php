@@ -31,10 +31,10 @@
 		    $("#listajuicios").fadeOut();
 		    $('#fondoOscuro3').fadeOut('slow');
         }
-        function abre() {
+    /*  function abre() {
             $("#altaOficio").fadeIn();
             $("#altaOficio").load("e/juiciosNuevo.php");
-        }
+        }  */
     </script>  
 </head>
 
@@ -45,7 +45,7 @@
     <div id="listajuicios">
         <div class="navbarJuicios">
             <a href="#" class="logo">Lista de Juicios</a>
-            <a href="javascript:abre()"> <img src="images/registro_nuevo.png" /> Nuevo Juicio </a>
+   <!--         <a href="javascript:abre()"> <img src="images/registro_nuevo.png" /> Nuevo Juicio </a>  -->
 		    <div class="navbarJuicios-right">
                 <a href="javascript:cerrarListaJuicios()">Cerrar</a>
 		    </div>

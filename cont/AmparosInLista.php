@@ -31,10 +31,10 @@
 		    $("#listajuicios").fadeOut();
 		    $('#fondoOscuro3').fadeOut('slow');
         }
-            function abre() {
+          /*  function abre() {
                 $("#altaOficio").fadeIn();
                 $("#altaOficio").load("e/amparosInAlta.php");
-            }
+            }  */
     </script>  
 </head>
 
@@ -45,7 +45,7 @@
     <div id="listajuicios">
         <div class="navbarJuicios">
             <a href="#" class="logo">Lista de Amparos Indirectos</a>
-            <a href="javascript:abre()"> <img src="images/registro_nuevo.png" /> Alta de Amparo Indirecto </a>
+        <!-- <a href="javascript:abre()"> <img src="images/registro_nuevo.png" /> Alta de Amparo Indirecto </a>  -->
 		    <div class="navbarJuicios-right">
                 <a href="javascript:cerrarListaJuicios()">Cerrar</a>
 		    </div>
