@@ -1,0 +1,24 @@
+{
+  "name": "recupera",
+  "version": "1.0.0",
+  "description": "homework",
+  "main": "index.html",
+  "dependencies": {
+    "webpack": "^4.29.6"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jiculi/recupera.git"
+  },
+  "author": "jiculi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jiculi/recupera/issues"
+  },
+  "homepage": "https://github.com/Jiculi/recupera#readme",
+  "keywords": []
+}
